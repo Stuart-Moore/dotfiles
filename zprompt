@@ -1,0 +1,45 @@
+# refreshes the prompt every $TMOUT seconds
+TMOUT=15
+
+export PROMPT="[%n]@%m %1~ %#"
+function preexec() {
+  timer=$(($(gdate +%s%0N)/1000000))
+}
+
+function precmd() {
+  if [ $timer ]; then
+    now=$(($(gdate +%s%0N)/1000000))
+    calculated=$(( $now-$timer ))
+    hours=$(( $calculated/1000/3600 ))
+    min=$(( $calculated/1000/60 ))
+    sec=$(( ($calculated/1000)%60 ))
+
+    if [[ "${calculated}" -le 1000 ]]; then
+      elapsed="%F{magenta}${calculated}ms"
+    elif [[ "${calculated}" -le 60000 ]]; then
+      elapsed="%F{green}$(( ${calculated} / 1000 ))s"
+    else
+      if [ "$hours" -gt 0 ]; then
+        min="$(( $min%60 ))"
+        elapsed="%F{red}${hours}h${min}m${sec}s"
+      else
+        elapsed="%F{yellow}${min}m${sec}s"
+      fi
+    fi
+
+    export RPROMPT="[${elapsed}%f] [%F{green}%D{%Y/%m/%d}%f|%F{cyan}%D{%H:%M}%f]"
+    unset timer
+  fi
+}
+
+function TRAPALRM() {
+  case "$WIDGET" in
+    expand-or-complete|self-insert|up-line-or-beginning-search|down-line-or-beginning-search|backward-delete-char|.history-incremental-search-backward|.history-incremental-search-forward|fzf-history-widget)
+      :
+      ;;
+
+    *)
+      zle reset-prompt
+      ;;
+  esac
+}
