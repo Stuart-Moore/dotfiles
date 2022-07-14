@@ -1,0 +1,189 @@
+
+
+#Set vim keybindings
+bindkey -v
+export KEYTIMEOUT=1
+
+source ~/dotfiles/zsh/zsh-aliases
+
+#Aliases that don't go publisc
+if [[ -f "~/dotfiles/zsh/zsh-aliases-private" ]]; then
+    source ~/dotfiles/zsh/zsh-aliases-private
+fi
+
+source ~/dotfiles/zsh/zprompt	
+setopt SHARE_HISTORY
+setopt AUTOCD EXTENDEDGLOB NOMATCH MENUCOMPLETE
+setopt INTERACTIVE_COMMENTS
+
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS INC_APPEND_HISTORY
+
+export SAVEHIST
+export HISTFILE=~/.zsh_history
+export HISTFILESIZE=1000000000
+export HISTSIZE=1000000000
+export HISTTIMEFORMAT="[%F %T] "
+
+#export PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
+
+source ~/dotfiles/zsh/zsh-snap/znap.zsh
+znap source marlonrichert/zsh-autocomplete
+zstyle ':autocomplete:*' min-input 1  # int
+
+znap source zsh-users/zsh-syntax-highlighting
+znap source hlissner/zsh-autopair
+
+# Wait until this many characters have been typed, before showing completions
+
+#set up history. 
+  #pretty ls
+  export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+  export CLICOLOR=1
+
+# wordaround for non keyed server
+
+# Colorize grep output (good for log files)
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+alias ls='ls -G'
+alias dsh='du -sx * | sort -rn | head'
+alias sshpass='ssh -o PreferredAuthentications=password'
+alias hg='history | grep'
+alias get-myip='curl http://ipinfo.io/ip'
+alias cip='get-myip | pbcopy'
+alias ci='get-myip | pbcopy'
+alias hiveboost='curl https://maker.ifttt.com/trigger/alfred_hive/with/key/WAlGP39Y_GCcMvIcnu51_'
+alias nsl='nslookup '
+alias lplog='lpass login stuart.moore@ntu.ac.uk'
+alias viho='vi /etc/hosts'
+alias cdu='cd ..'
+alias lpg='lpass generate gen 25 -c'
+alias reteams='pkill Teams; sleep 10; open -b com.microsoft.Teams'
+alias refox='pkill irefox; sleep 10; open -a /Applications/Firefox.app'
+alias shost='sudo vi /etc/hosts'
+alias cinst='echo "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" | pbcopy'
+alias pg='ps -ef | grep -i'
+alias ltd='lt ~/Downloads'
+alias lsd='ls -d .*'
+alias cdg='cd ~/github'
+alias cdd='cd ~/Downloads'
+alias cdc='cd ~/certs'
+alias c.='cd ~/dotfiles/'
+alias cz='cd ~/dotfiles/zsh/'
+
+# aliases for common file edits
+alias virc='vi ~/.vimrc'
+alias vibp='vi ~/dotfiles/zsh/zshrc'
+alias sobp='source ~/.zshrc'
+alias sz=sobp
+alias vz=vibp
+
+# Azure CLI path completion
+autoload bashcompinit && bashcompinit source '/Users/com3mooresm/lib/azure-cli/az.completion'
+
+#jump up and down into a folder
+cu() {
+    cd "../$@"
+}
+#Make a timestamped copy of a file
+ct() {     
+    ts=`date +"%d%m%Y"`;     
+    cp "$@" "$@.$ts"; 
+}
+
+# make a folder and jump into it
+mc() {
+        mkdir -p "$@"
+        cd "$@" || exit
+}
+
+#connect airpods and make default output/input
+function caps {
+    #BluetoothConnector -c 50-57-8a-c8-f5-6c --notify
+    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro" -t input
+    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro"
+    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro" -t system
+}
+
+function dcaps {
+    BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
+}
+
+function bmic {
+    /usr/local/bin/SwitchAudioSource -s "Wave Link Stream" -t input
+}
+
+function daps {
+    BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
+}
+#tail ls folder
+
+function lt {
+    ls -lrt $1 | tail
+}
+
+#ns lookup to clipboard
+
+function dnc {
+    set -o pipefail
+    HIP=$(host $1 | grep -v IPv6 | awk '{print $4}')
+if [ $? == 1 ]
+then
+    echo "$1 not found"
+else
+    echo "$1 = $HIP"
+    echo $HIP | pbcopy
+fi
+}
+
+# fcb, copy file contents to clipboard
+function fcb {
+pbcopy < $1
+}
+
+# lastpass linux root password lookups
+# Set lastpass session length to 10 hours
+export LPASS_AGENT_TIMEOUT=0
+function lrp {
+lpass show --notes 'Linux root passwords' | grep $1 | awk 'BEGIN {RS=""}{gsub(/\/n/,""); print $2}' | head -1 | pbcopy
+}
+
+# VI bindings
+set -o vi
+export EDITOR=vim
+
+
+#iTerm tab header refresh
+#if [ $ITERM_SESSION_ID ]; then
+#  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+#fi
+
+
+#eval "$(rbenv init -)"
+
+#if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+#  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+#  GIT_PROMPT_ONLY_IN_REPO=0
+#  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+#fi
+#FLAGS
+
+
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+#PATH mangling
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+export PATH="$PATH:/Users/com3mooresm/bin:/Users/com3mooresm/Library/Python/2.7/bin"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
