@@ -1,4 +1,12 @@
-
+source ~/dotfiles/zsh/plugins/zsh-snap/znap.zsh
+export DOTFIlLES=~/dotfiles
+export TERM=xterm
+export TERMINFO='/usr/share/terminfo/'
+#if [ -z "$TMUX" ]; then
+#    export TERM=xterm-256color-italic
+#else
+#    export TERM=tmux-256color
+#fi
 
 #Set vim keybindings
 bindkey -v
@@ -19,7 +27,7 @@ setopt INTERACTIVE_COMMENTS
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS INC_APPEND_HISTORY
 
-export SAVEHIST
+export SAVEHIST=100000000
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000000
 export HISTSIZE=1000000000
@@ -27,7 +35,6 @@ export HISTTIMEFORMAT="[%F %T] "
 
 #export PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
 
-source ~/dotfiles/zsh/zsh-snap/znap.zsh
 znap source marlonrichert/zsh-autocomplete
 zstyle ':autocomplete:*' min-input 1  # int
 
@@ -186,4 +193,3 @@ export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="$PATH:/Users/com3mooresm/bin:/Users/com3mooresm/Library/Python/2.7/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
