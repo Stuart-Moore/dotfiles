@@ -1,2 +1,4 @@
-zsh/plugins/
+Zsh/plugins/
 zsh/zsh-aliases-private
+vim/.vim/
+tmux/plugins
