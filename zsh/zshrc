@@ -20,13 +20,17 @@ if [[ -f "~/dotfiles/zsh/zsh-aliases-private" ]]; then
 fi
 
 source ~/dotfiles/zsh/zprompt	
-setopt SHARE_HISTORY
+
+
 setopt AUTOCD EXTENDEDGLOB NOMATCH MENUCOMPLETE
 setopt INTERACTIVE_COMMENTS
 
-setopt INC_APPEND_HISTORY
-setopt HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS INC_APPEND_HISTORY
-
+# history setup
+setopt SHARE_HISTORY
+#setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS 
+#INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
 export SAVEHIST=100000000
 export HISTFILE=~/.zsh_history
 export HISTFILESIZE=1000000000

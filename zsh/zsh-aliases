@@ -21,7 +21,7 @@ alias hg='history | grep'
 alias get-myip='curl http://ipinfo.io/ip'
 alias cip='get-myip | pbcopy'
 
-
+alias co='cd $OLDPWD'
 alias nsl='nslookup '
 alias viho='vi /etc/hosts'
 alias cdu='cd ..'
