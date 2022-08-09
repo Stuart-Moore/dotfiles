@@ -1,5 +1,5 @@
 source ~/dotfiles/zsh/plugins/zsh-snap/znap.zsh
-export DOTFIlLES=~/dotfiles
+export DOTFILES=~/dotfiles
 export TERM=xterm
 export TERMINFO='/usr/share/terminfo/'
 #if [ -z "$TMUX" ]; then
@@ -191,6 +191,7 @@ export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 #PATH mangling
+export PATH="$PATH:$DOTFILES/cht.sh"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
