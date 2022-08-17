@@ -1,3 +1,6 @@
+alias va='vi $DOTFILES/zsh/zsh-zliases'
+#Copy this file to clipboard
+alias cpalias='fcb $DOTFILES/zsh/zsh-aliases'
 #Auto colour grep output
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -11,35 +14,46 @@ alias rm='rm -i'
 #Colourful lt
 alias ls='ls -G'
 
+#cheat sheet quick access 
+alias ch='cht.sh'
 #largest files
 alias dsh='du -sx * | sort -rn | head'
 
 #workaround for non key ssh
 alias sshpass='ssh -o PreferredAuthentications=password'
 
+# work with history
 alias hg='history | grep'
+alias hm='history | more'
+
+# local IP grabbing
 alias get-myip='curl http://ipinfo.io/ip'
 alias cip='get-myip | pbcopy'
 
-alias co='cd $OLDPWD'
 alias nsl='nslookup '
-alias viho='vi /etc/hosts'
 alias cdu='cd ..'
+
+
 alias lpg='lpass generate gen 25 -c'
 alias reteams='pkill Teams; sleep 10; open -b com.microsoft.Teams'
 alias refox='pkill irefox; sleep 10; open -a /Applications/Firefox.app'
-alias shost='sudo vi /etc/hosts'
 alias cinst='echo "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" | pbcopy'
 alias pg='ps -ef | grep -i'
 alias ltd='lt ~/Downloads'
 alias lsd='ls -d .*'
 alias cdg='cd ~/github'
+
+#quick moves
+alias co='cd $OLDPWD'
 alias cdd='cd ~/Downloads'
 alias cdc='cd ~/certs'
 alias c.='cd ~/dotfiles/'
 alias cz='cd ~/dotfiles/zsh/'
+
 # aliases for common file edits
 alias virc='vi ~/.vimrc'
+alias shost='sudo vi /etc/hosts'
+alias viho='vi /etc/hosts'
 alias vibp='vi ~/dotfiles/zsh/zshrc'
 alias sobp='source ~/dotfiles/zsh/zshrc'
 alias sz=sobp
