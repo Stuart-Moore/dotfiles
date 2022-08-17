@@ -1,7 +1,8 @@
-source ~/dotfiles/zsh/plugins/zsh-snap/znap.zsh
 export DOTFILES=~/dotfiles
 export TERM=xterm
 export TERMINFO='/usr/share/terminfo/'
+
+source ~/dotfiles/zsh/plugins/zsh-snap/znap.zsh
 #if [ -z "$TMUX" ]; then
 #    export TERM=xterm-256color-italic
 #else
@@ -19,7 +20,7 @@ if [[ -f "~/dotfiles/zsh/zsh-aliases-private" ]]; then
     source ~/dotfiles/zsh/zsh-aliases-private
 fi
 
-source ~/dotfiles/zsh/zprompt	
+source $DOTFILES/zsh/zprompt	
 
 
 setopt AUTOCD EXTENDEDGLOB NOMATCH MENUCOMPLETE
@@ -135,6 +136,10 @@ function daps {
     BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
 }
 #tail ls folder
+
+function ft {
+    find . -name $1 -print
+}
 
 function lt {
     ls -lrt $1 | tail

@@ -1,3 +1,6 @@
+alias va='vi $DOTFILES/zsh/zsh-zliases'
+#Copy this file to clipboard
+alias cpalias='fcb $DOTFILES/zsh/zsh-aliases'
 #Auto colour grep output
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -19,12 +22,18 @@ alias dsh='du -sx * | sort -rn | head'
 #workaround for non key ssh
 alias sshpass='ssh -o PreferredAuthentications=password'
 
+# work with history
 alias hg='history | grep'
+alias hm='history | more'
+
+# local IP grabbing
 alias get-myip='curl http://ipinfo.io/ip'
 alias cip='get-myip | pbcopy'
 
 alias nsl='nslookup '
 alias cdu='cd ..'
+
+
 alias lpg='lpass generate gen 25 -c'
 alias reteams='pkill Teams; sleep 10; open -b com.microsoft.Teams'
 alias refox='pkill irefox; sleep 10; open -a /Applications/Firefox.app'
