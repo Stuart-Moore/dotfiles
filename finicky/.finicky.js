@@ -23,6 +23,10 @@ module.exports = {
     {
       match: /^https?:\/\/.*youtu\.be.*$/,
       browser: "Google Chrome"
+    },    
+    {
+      match: /^https?:\/\/.*facebook\.com.*$/,
+      browser: "Brave Browser"
     }
   ]
 }
