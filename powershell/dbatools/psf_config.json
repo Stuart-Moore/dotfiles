@@ -1,0 +1,695 @@
+[
+  {
+    "FullName": "psremoting.sessions.expirationtimeout",
+    "Value": "3000000000",
+    "Version": 1,
+    "Type": 7,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.connection.protocol",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "developer.mode.enable",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "commands.resolve-dbanetworkname.bypass",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "tabexpansion.updateinterval",
+    "Value": "1800000000",
+    "Version": 1,
+    "Type": 7,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.disable.customtimespan",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.minimuminfo",
+    "Value": "1",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "import.alwaysbuildlibrary",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "import.serialimport",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "tabexpansion.disable",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.maxmessagecount",
+    "Value": "1024",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.cache.disable.badcredentiallist",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.connection.trustcert",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.time",
+    "Value": "HH:mm:ss",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.maxmessagefilebytes",
+    "Value": "5242880",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.errorlogfileenabled",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.mode.lazymessagelevel",
+    "Value": "4",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.cache.disable.credentialautoregister",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "azure.vm",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "tabexpansion.disable.asynchronous",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.dbatoolsexport",
+    "Value": "/Users/com3mooresm/DbatoolsExport",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.style.breadcrumbs",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.connection.timeout",
+    "Value": "15",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.size.style",
+    "Value": "H4sIAAAAAAAAE22PwU7DMBBE7/0KKx9gO6UnlPjUHnopEgm9O2ZLjNbeEG8B8/U4RUUI9bSrNzuj2eZheE3iCHPyFNuqlrXUsq7EZ8CY2mpknu6VSm6EYJMM3s2U6MTSUVATfRTfCIhqrfVG6U1lVkI0JVI8wmn/3Fb6QgrrD//RAk33ho4Q7UCzZf8OcjtYJsIkn9ij5yw7/wUdZ4RG9X+NOTEEuYvncFM4WjxDn6fbttIQHP9KZTlce1LHs48vZpujLe8W6Up+DvZ3a1M3ahnLr6pEmdVlJPMNL4ewo00BAAA=",
+    "Version": 1,
+    "Type": 12,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.messagelogfileenabled",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.connection.clientname",
+    "Value": "dbatools PowerShell module - dbatools.io",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.mode.default",
+    "Value": "H4sIAAAAAAAAE22PwW7CMBBE73yF5Q9YO5RTlfhUhDgUpBJxd8xCgmxvsJ0W/h4niKqqOM3qzc5qttw258j2GGJHvuIFFCCh4OzqrI8Vb1Pq34WIpkWnI7jOBIp0TGDIiZ5+cq5Fa8VcyoWQC65mjJX5JPvC4/pQcTmRzOrNfzRCtbtYQ9bqhoJO3TfCR6MTkY2wQo9BW1he0Qwpl/ukA5ai/hu+xYQOln5wL429tgPWt/51LLdEk36tPGyeXWmXQudPapRp5Qke/vptrmQpRhnfFfmSmk0S1R1atL4tUAEAAA==",
+    "Version": 1,
+    "Type": 12,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.nestedlevel.decrement",
+    "Value": "0",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "azure.clientsecret",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.tagcache",
+    "Value": "H4sIAAAAAAAAE72RQU8CMRCF7/yKTe92FiQxMbtNjMaEA0hc9OSl7A5sSdshnYL47+1C2CjGo57avJnp++a1eFpuOHvFwIZ8KYZyKHM5FNnBWc+laGPc3gJw3aLTLJ2pAzGtoqzJwZbe01yL1sIoz8eQj4UaZFmRnsyecTVpSpEflaQtZpdSJ6rqgyM6OdVer9Ghj/JuF8npmGjkXMd24ldUwOLnSDLBOvaldJmdraiKwfi1ghdOfJBQrx1RQHYgLdXaArc64Ff+KTU7iwzNUkciy3CMYXQDS+N78cr4Bg9yw+ST3dnlZDoPtOWesspmpXgIZo9CQQHV90Lq3ZsGg1DTPs95x1J1LPI+ob49GounTX8d7+IRf7vkpfO/ORbQB1pA+mo1OB6sPgG9eQBmsAIAAA==",
+    "Version": 1,
+    "Type": 12,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.connection.packetsize",
+    "Value": "4096",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.uformat",
+    "Value": "%Y%m%d%H%M%S",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.alwaysencrypted.enclave",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "commands.write-dbadbtabledata.raw",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "commands.write-dbadbtabledata.timespantype",
+    "Value": "TotalMilliseconds",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.cache.enable.credentialfailover",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "azure.appid",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.servers",
+    "Value": "/Users/com3mooresm/.local/share//PowerShell/dbatools/servers.xml",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.transform.errorqueuesize",
+    "Value": "512",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.style.timestamp",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.cache.disable.cimpersistence",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.connection.encrypt",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "azure.certificate.store",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.disable.customdatetime",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.maxmessagefilecount",
+    "Value": "5",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.type.disable.powershellremoting",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.size.digits",
+    "Value": "2",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.managed.localappdata",
+    "Value": "/Users/com3mooresm/.config/",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "import.sqlpscheck",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "import.dodotsource",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.developercolor",
+    "Value": "Grey",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.errorlogenabled",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.alwaysencrypted.enable",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.info.color.emphasis",
+    "Value": "green",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "azure.certificate.thumbprint",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.managed.temp",
+    "Value": "/var/folders/jf/0prhfjh95kn893rbykc8k6380000gp/T",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.style.functionname",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.messagelogenabled",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.maxerrorfilebytes",
+    "Value": "20971520",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.maximuminfo",
+    "Value": "3",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "psremoting.sessions.enable",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "commands.write-dbadbtabledata.sizetype",
+    "Value": "Int64",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "tpexample.example",
+    "Value": "true",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.dbatoolstemp",
+    "Value": "/var/folders/jf/0prhfjh95kn893rbykc8k6380000gp/T/",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.managed.appdata",
+    "Value": "/Users/com3mooresm/.local/share/",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.type.disable.cimdcom",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.batchseparator",
+    "Value": "GO",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.minimumdebug",
+    "Value": "1",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "commands.get-dbaregserver.defaultcms",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.connection.database",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.maxerrorcount",
+    "Value": "128",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.maxtotalfoldersize",
+    "Value": "104857600",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.maximumdebug",
+    "Value": "9",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.badconnectiontimeout",
+    "Value": "9000000000",
+    "Version": 1,
+    "Type": 7,
+    "Style": "default"
+  },
+  {
+    "FullName": "assets.sqlbuildreference",
+    "Value": "https://sqlcollaborative.github.io/assets/dbatools-buildref-index.json",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.maximumverbose",
+    "Value": "6",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "logging.maxlogfileage",
+    "Value": "6048000000000",
+    "Version": 1,
+    "Type": 7,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.type.disable.cimrm",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.type.disable.wmi",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "tabexpansion.disable.synchronous",
+    "Value": "true",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "commands.get-dbaregserver.includelocal",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "azure.tenantid",
+    "Value": "null",
+    "Version": 1,
+    "Type": 1,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.consoleoutput.disable",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "commands.write-dbadbtabledata.ignorenull",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "sql.execution.timeout",
+    "Value": "0",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.dbatoolsdata",
+    "Value": "/Users/com3mooresm/.local/share//PowerShell/dbatools",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.minimumverbose",
+    "Value": "4",
+    "Version": 1,
+    "Type": 3,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.managed.programdata",
+    "Value": "/etc/xdg/",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.cache.force.overrideexplicitcredential",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "computermanagement.cache.disable.all",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.date",
+    "Value": "dd MMM yyyy",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "tabexpansion.updatetimeout",
+    "Value": "300000000",
+    "Version": 1,
+    "Type": 7,
+    "Style": "default"
+  },
+  {
+    "FullName": "psremoting.pssession.usessl",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "psremoting.pssessionoption.includeportinspn",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "import.strictsecuritymode",
+    "Value": "false",
+    "Version": 1,
+    "Type": 2,
+    "Style": "default"
+  },
+  {
+    "FullName": "path.dbatoolslogpath",
+    "Value": "/Users/com3mooresm/.local/share//PowerShell/dbatools",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.info.color.subtle",
+    "Value": "gray",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "message.infocolor",
+    "Value": "Cyan",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  },
+  {
+    "FullName": "formatting.datetime",
+    "Value": "yyyy-MM-dd HH:mm:ss.fff",
+    "Version": 1,
+    "Type": 6,
+    "Style": "default"
+  }
+]
