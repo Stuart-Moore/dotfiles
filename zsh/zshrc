@@ -14,7 +14,8 @@ source ~/dotfiles/zsh/plugins/zsh-snap/znap.zsh
 bindkey -v
 export KEYTIMEOUT=1
 
-source ~/dotfiles/zsh/zsh-aliases
+source $DOTFILES/zsh/zsh-aliases
+source $DOTFILES/zsh/zsh-functions
 
 #Aliases that don't go publisc
 if [[ -f "~/dotfiles/zsh/zsh-aliases-private" ]]; then
@@ -91,8 +92,8 @@ alias c.='cd ~/dotfiles/'
 alias cz='cd ~/dotfiles/zsh/'
 
 # aliases for common file edits
-alias virc='vi ~/.vimrc'
-alias vibp='vi ~/dotfiles/zsh/zshrc'
+alias virc='vi $DOTFILES/vim/.vimrc'
+alias vibp='vi $DOTFILES/zsh/zshrc'
 alias vz=vibp
 
 # Azure CLI path completion

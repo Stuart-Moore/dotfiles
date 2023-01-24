@@ -6,6 +6,10 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+# mic control
+alias mm='automator $DOTFILES/automator/mic-toggle.workflow'
+alias ms='automator $DOTFILES/automator/mic-status.workflow'
+
 #prompt before overwrite
 alias cp="cp -i"
 alias mv='mv -i'
