@@ -73,9 +73,7 @@ alias hg='history | grep'
 alias get-myip='curl http://ipinfo.io/ip'
 alias cip='get-myip | pbcopy'
 alias ci='get-myip | pbcopy'
-alias hiveboost='curl https://maker.ifttt.com/trigger/alfred_hive/with/key/WAlGP39Y_GCcMvIcnu51_'
 alias nsl='nslookup '
-alias lplog='lpass login stuart.moore@ntu.ac.uk'
 alias viho='vi /etc/hosts'
 alias cdu='cd ..'
 alias lpg='lpass generate gen 25 -c'
@@ -97,7 +95,7 @@ alias vibp='vi $DOTFILES/zsh/zshrc'
 alias vz=vibp
 
 # Azure CLI path completion
-autoload bashcompinit && bashcompinit source '/Users/com3mooresm/lib/azure-cli/az.completion'
+autoload bashcompinit && bashcompinit source '$HOME/lib/azure-cli/az.completion'
 
 #jump up and down into a folder
 cu() {
@@ -199,6 +197,6 @@ export PATH="$PATH:$DOTFILES/cht.sh"
 export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
-export PATH="$PATH:/Users/com3mooresm/bin:/Users/com3mooresm/Library/Python/2.7/bin"
+export PATH="$PATH:$HOME/bin:$HOME/Library/Python/2.7/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

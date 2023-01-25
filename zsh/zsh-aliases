@@ -1,6 +1,9 @@
+#Make editing this file easy
 alias va='vi $DOTFILES/zsh/zsh-aliases'
+
 #Copy this file to clipboard
 alias cpalias='fcb $DOTFILES/zsh/zsh-aliases'
+
 #Auto colour grep output
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -19,8 +22,6 @@ alias rm='rm -i'
 alias qc='qmk compile -kb splitkb/kyria/rev1 -km stuart-moore'
 alias qf='qmk flash -kb splitkb/kyria/rev1 -km stuart-moore'
 
-#Colourful lt
-alias ls='ls -G'
 
 #cheat sheet quick access 
 alias ch='cht.sh'
@@ -43,16 +44,23 @@ alias cdu='cd ..'
 
 
 alias lpg='lpass generate gen 25 -c'
+
 alias reteams='pkill Teams; sleep 10; open -b com.microsoft.Teams'
 alias refox='pkill irefox; sleep 10; open -a /Applications/Firefox.app'
 alias cinst='echo "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('\''https://community.chocolatey.org/install.ps1'\''))" | pbcopy'
 alias pg='ps -ef | grep -i'
+
+# ls aliases
 alias ltd='lt ~/Downloads'
+#Colourful lt
+alias ls='ls -G'
 alias lsd='ls -d .*'
-alias cdg='cd ~/github'
+alias ll='ls -lrt'
+alias lt='ls -lrt | tail'
 
 #quick moves
 alias co='cd $OLDPWD'
+alias cdg='cd ~/github'
 alias cdd='cd ~/Downloads'
 alias cdc='cd ~/certs'
 alias c.='cd ~/dotfiles/'
