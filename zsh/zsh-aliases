@@ -25,6 +25,8 @@ alias qf='qmk flash -kb splitkb/kyria/rev1 -km stuart-moore'
 
 #cheat sheet quick access 
 alias ch='cht.sh'
+
+
 #largest files
 alias dsh='du -sx * | sort -rn | head'
 
@@ -42,7 +44,6 @@ alias cip='get-myip | pbcopy'
 alias nsl='nslookup '
 alias cdu='cd ..'
 
-
 alias lpg='lpass generate gen 25 -c'
 
 alias reteams='pkill Teams; sleep 10; open -b com.microsoft.Teams'
@@ -56,7 +57,7 @@ alias ltd='lt ~/Downloads'
 alias ls='ls -G'
 alias lsd='ls -d .*'
 alias ll='ls -lrt'
-alias lt='ls -lrt | tail'
+#alias lt='ls -lrt | tail'
 
 #quick moves
 alias co='cd $OLDPWD'

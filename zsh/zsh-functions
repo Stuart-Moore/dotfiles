@@ -1,0 +1,72 @@
+
+#jump up and down into a folder
+cu() {
+    cd "../$@"
+}
+#Make a timestamped copy of a file
+ct() {     
+    ts=`date +"%d%m%Y"`;     
+    cp "$@" "$@.$ts"; 
+}
+
+# make a folder and jump into it
+mc() {
+        mkdir -p "$@"
+        cd "$@" || exit
+}
+
+#connect airpods and make default output/input
+function caps {
+    #BluetoothConnector -c 50-57-8a-c8-f5-6c --notify
+    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro" -t input
+    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro"
+    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro" -t system
+}
+
+function dcaps {
+    BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
+}
+
+function bmic {
+    /usr/local/bin/SwitchAudioSource -s "Wave Link Stream" -t input
+}
+
+function daps {
+    BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
+}
+#tail ls folder
+
+function ft {
+    find . -name $1 -print
+}
+
+function lt {
+    TD="${1:-./}"
+    ls -lrt $TD | tail
+}
+
+#ns lookup to clipboard
+
+function dnc {
+    set -o pipefail
+    HIP=$(host $1 | grep -v IPv6 | awk '{print $4}')
+if [ $? == 1 ]
+then
+    echo "$1 not found"
+else
+    echo "$1 = $HIP"
+    echo $HIP | pbcopy
+fi
+}
+
+# fcb, copy file contents to clipboard
+function fcb {
+pbcopy < $1
+}
+
+# lastpass linux root password lookups
+# Set lastpass session length to 10 hours
+export LPASS_AGENT_TIMEOUT=0
+function lrp {
+lpass show --notes 'Linux root passwords' | grep $1 | awk 'BEGIN {RS=""}{gsub(/\/n/,""); print $2}' | head -1 | pbcopy
+}

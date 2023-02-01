@@ -14,12 +14,15 @@ source ~/dotfiles/zsh/plugins/zsh-snap/znap.zsh
 bindkey -v
 export KEYTIMEOUT=1
 
+#Remove aliases before reimporting
+unalias -m '*'
 source $DOTFILES/zsh/zsh-aliases
+
 source $DOTFILES/zsh/zsh-functions
 
 #Aliases that don't go publisc
-if [[ -f "~/dotfiles/zsh/zsh-aliases-private" ]]; then
-    source ~/dotfiles/zsh/zsh-aliases-private
+if [[ -f "$DOTFILES/zsh/zsh-aliases-private" ]]; then
+    source $DOTFILES/zsh/zsh-aliases-private
 fi
 
 source $DOTFILES/zsh/zprompt	
@@ -62,111 +65,8 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
-alias rm='rm -i'
-alias ls='ls -G'
-alias dsh='du -sx * | sort -rn | head'
-alias sshpass='ssh -o PreferredAuthentications=password'
-alias hg='history | grep'
-alias get-myip='curl http://ipinfo.io/ip'
-alias cip='get-myip | pbcopy'
-alias ci='get-myip | pbcopy'
-alias nsl='nslookup '
-alias viho='vi /etc/hosts'
-alias cdu='cd ..'
-alias lpg='lpass generate gen 25 -c'
-alias reteams='pkill Teams; sleep 10; open -b com.microsoft.Teams'
-alias refox='pkill irefox; sleep 10; open -a /Applications/Firefox.app'
-alias shost='sudo vi /etc/hosts'
-alias pg='ps -ef | grep -i'
-alias ltd='lt ~/Downloads'
-alias lsd='ls -d .*'
-alias cdg='cd ~/github'
-alias cdd='cd ~/Downloads'
-alias cdc='cd ~/certs'
-alias c.='cd ~/dotfiles/'
-alias cz='cd ~/dotfiles/zsh/'
-
-# aliases for common file edits
-alias virc='vi $DOTFILES/vim/.vimrc'
-alias vibp='vi $DOTFILES/zsh/zshrc'
-alias vz=vibp
-
 # Azure CLI path completion
 autoload bashcompinit && bashcompinit source '$HOME/lib/azure-cli/az.completion'
-
-#jump up and down into a folder
-cu() {
-    cd "../$@"
-}
-#Make a timestamped copy of a file
-ct() {     
-    ts=`date +"%d%m%Y"`;     
-    cp "$@" "$@.$ts"; 
-}
-
-# make a folder and jump into it
-mc() {
-        mkdir -p "$@"
-        cd "$@" || exit
-}
-
-#connect airpods and make default output/input
-function caps {
-    #BluetoothConnector -c 50-57-8a-c8-f5-6c --notify
-    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro" -t input
-    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro"
-    /usr/local/bin/SwitchAudioSource -s "Stuart’s AirPods Pro" -t system
-}
-
-function dcaps {
-    BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
-}
-
-function bmic {
-    /usr/local/bin/SwitchAudioSource -s "Wave Link Stream" -t input
-}
-
-function daps {
-    BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
-}
-#tail ls folder
-
-function ft {
-    find . -name $1 -print
-}
-
-function lt {
-    ls -lrt $1 | tail
-}
-
-#ns lookup to clipboard
-
-function dnc {
-    set -o pipefail
-    HIP=$(host $1 | grep -v IPv6 | awk '{print $4}')
-if [ $? == 1 ]
-then
-    echo "$1 not found"
-else
-    echo "$1 = $HIP"
-    echo $HIP | pbcopy
-fi
-}
-
-# fcb, copy file contents to clipboard
-function fcb {
-pbcopy < $1
-}
-
-# lastpass linux root password lookups
-# Set lastpass session length to 10 hours
-export LPASS_AGENT_TIMEOUT=0
-function lrp {
-lpass show --notes 'Linux root passwords' | grep $1 | awk 'BEGIN {RS=""}{gsub(/\/n/,""); print $2}' | head -1 | pbcopy
-}
 
 # VI bindings
 set -o vi
