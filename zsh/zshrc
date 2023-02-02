@@ -1,4 +1,4 @@
-
+#example for demo
 export DOTFILES=~/dotfiles
 export TERM=xterm
 export TERMINFO='/usr/share/terminfo/'
