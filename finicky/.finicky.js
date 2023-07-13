@@ -27,6 +27,15 @@ module.exports = {
     {
       match: /^https?:\/\/.*facebook\.com.*$/,
       browser: "Brave Browser"
+    },    
+    {
+      match: /^https?:\/\/myidentity\.ntu\.ac\.uk.*$/,
+      browser: "Brave Browser"
+    },    
+    {
+      match: /^https?:\/\/meet\.google\.com.*$/,
+      browser: "Google Chrome"
     }
+      
   ]
 }

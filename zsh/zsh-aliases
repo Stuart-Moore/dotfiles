@@ -1,6 +1,9 @@
 #Make editing this file easy
 alias va='vi $DOTFILES/zsh/zsh-aliases'
 
+# edit zsh functions
+alias vf='vi $DOTFILES/zsh/zsh-functions'
+
 #Copy this file to clipboard
 alias cpalias='fcb $DOTFILES/zsh/zsh-aliases'
 
