@@ -50,7 +50,7 @@ zstyle ':autocomplete:*' min-input 1  # int
 
 znap source zsh-users/zsh-syntax-highlighting
 znap source hlissner/zsh-autopair
-
+autoload -Uz add-zsh-hook vcs_info
 # Wait until this many characters have been typed, before showing completions
 
 #set up history. 

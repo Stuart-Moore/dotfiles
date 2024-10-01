@@ -1,3 +1,7 @@
+#cli weather
+function weather() {
+    curl -s http://wttr.in/$1; 
+}
 
 #jump up and down into a folder
 cu() {
@@ -10,9 +14,16 @@ ct() {
 }
 
 # make a folder and jump into it
-mc() {
-        mkdir -p "$@"
-        cd "$@" || exit
+mc() { 
+    dir = "$1"
+    if [ -d "$dir" -a ! -h "$dir" ]
+    then
+        echo "$dir already exists"
+        exit 1
+    else
+        mkdir -p "$1"
+        cd "$1" || exit
+    fi
 }
 
 #force dns lookup against AD
@@ -24,7 +35,8 @@ nsla() {
 ced() {
 test=$(nslookup $@)
 if [ $? -eq 0 ]; then
-    openssl s_client -servername $@ -connect $@:443 2>&1 < /dev/null | openssl x509 -noout -dates || exit
+    openssl s_client -servername $@ -connect $@:443 2>&1 < /dev/null | openssl x509 -noout -dates
+    #|| exit
     return 1
 else
     echo 'host not found'
@@ -56,27 +68,27 @@ function bmic {
 function daps {
     BluetoothConnector -d e8-ab-fa-4d-2a-62 --notify
 }
-#tail ls folder
 
+#find file
 function ft {
     find . -name $1 -print
 }
 
+#tail ls folder
 function lt {
     TD="${1:-./}"
     ls -lrt $TD | tail
 }
 
 #ns lookup to clipboard
-
 function dnc {
     set -o pipefail
-    HIP=$(host $1 | grep -v IPv6 | awk '{print $4}')
+    HIP=$(/usr/bin/host $@ | grep -v IPv6 | grep -i '[0-9].[0-9]' | awk 'NR==1{print $4}')
 if [ $? == 1 ]
 then
-    echo "$1 not found"
+    echo "$@ not found this"
 else
-    echo "$1 = $HIP"
+    echo "$@ = $HIP"
     echo $HIP | pbcopy
 fi
 }
@@ -91,4 +103,16 @@ pbcopy < $1
 export LPASS_AGENT_TIMEOUT=0
 function lrp {
 lpass show --notes 'Linux root passwords' | grep $1 | awk 'BEGIN {RS=""}{gsub(/\/n/,""); print $2}' | head -1 | pbcopy
+}
+
+#curl functions
+#Curl headers over SSL
+function chs {
+   HOLD=$(echo $1 | sed 's/https:\/\///g') 
+    curl -vk -o /dev/null https://$HOLD
+}
+
+#curl headers on 80
+function ch {
+    curl -vk -o /dev/null http://$1
 }
