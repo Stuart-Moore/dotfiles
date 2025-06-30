@@ -113,6 +113,13 @@ function chs {
 }
 
 #curl headers on 80
-function ch {
+function chh {
     curl -vk -o /dev/null http://$1
 }
+
+
+# grep hosts files
+function hostg {
+    grep $1 /etc/hosts
+}
+

@@ -1,3 +1,15 @@
+#This at the top so it doesn't get clobbered by later errors
+
+# aliases for common file edits
+alias virc='vi ~/.vimrc'
+alias shost='sudo vi /etc/hosts'
+alias chost='cat /etc/hosts'
+alias ghost='cat /etc/hosts | grep -i'
+alias viho='vi /etc/hosts'
+alias vibp='vi ~/dotfiles/zsh/zshrc'
+alias sobp='source ~/dotfiles/zsh/zshrc'
+alias sz=sobp
+alias vz=vibp
 #Make editing this file easy
 alias va='vi $DOTFILES/zsh/zsh-aliases'
 
@@ -37,8 +49,8 @@ alias dsh='du -sx * | sort -rn | head'
 alias sshpass='ssh -o PreferredAuthentications=password'
 
 # work with history
-alias hg='history | grep'
-alias hm='history | more'
+alias hg='history -n -1000 | grep'
+alias hm='history -100 | more'
 
 # local IP grabbing
 alias get-myip='curl http://ipinfo.io/ip'
@@ -54,12 +66,15 @@ alias refox='pkill irefox; sleep 10; open -a /Applications/Firefox.app'
 alias cinst='echo "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('\''https://community.chocolatey.org/install.ps1'\''))" | pbcopy'
 alias pg='ps -ef | grep -i'
 
+alias gup='echo "(get-date) – (gcim Win32_OperatingSystem).LastBootUpTime" | pbcopy'
+
 # ls aliases
 alias ltd='lt ~/Downloads'
 #Colourful lt
 alias ls='ls -G'
 alias lsd='ls -d .*'
 alias ll='ls -lrt'
+alias lg='ls | grep '
 #alias lt='ls -lrt | tail'
 
 #quick moves
@@ -70,15 +85,8 @@ alias cdc='cd ~/certs'
 alias c.='cd ~/dotfiles/'
 alias cz='cd ~/dotfiles/zsh/'
 
-# aliases for common file edits
-alias virc='vi ~/.vimrc'
-alias shost='sudo vi /etc/hosts'
-alias chost='cat /etc/hosts'
-alias viho='vi /etc/hosts'
-alias vibp='vi ~/dotfiles/zsh/zshrc'
-alias sobp='source ~/dotfiles/zsh/zshrc'
-alias sz=sobp
-alias vz=vibp
 
 alias wn="weather 'nottingham?format=4'"
 
+#flush DNS
+alias flushdns='sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder'
